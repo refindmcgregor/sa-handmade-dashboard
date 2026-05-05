@@ -216,7 +216,7 @@ const productLinks = (p) => {
   return [
     { label: "Instagram", url: `https://www.instagram.com/explore/tags/${tag}sa/` },
     { label: "TikTok", url: `https://www.tiktok.com/search?q=${encodeURIComponent(p.name + " South Africa")}` },
-    { label: "Facebook", url: `https://www.facebook.com/search/top/?q=${search}` },
+    { label: "Facebook", url: `https://www.facebook.com/marketplace/search?query=${search}` },
   ];
 };
 
@@ -225,92 +225,92 @@ const categoryLinks = {
   "Sewing": [
     { label: "#sewingSA on IG", url: "https://www.instagram.com/explore/tags/sewingsa/" },
     { label: "#shweshwe on IG", url: "https://www.instagram.com/explore/tags/shweshwe/" },
-    { label: "Sewing on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20sewing%20south%20africa" },
+    { label: "Sewing on Facebook", url: "https://www.facebook.com/marketplace/search?query=handmade%20sewing%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Crochet": [
     { label: "#crochetSA on IG", url: "https://www.instagram.com/explore/tags/crochetsa/" },
     { label: "#crochetsouthafrica on TikTok", url: "https://www.tiktok.com/tag/crochetsouthafrica" },
-    { label: "Crochet on Facebook", url: "https://www.facebook.com/search/top/?q=crochet%20south%20africa" },
+    { label: "Crochet on Facebook", url: "https://www.facebook.com/marketplace/search?query=crochet%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Knit": [
     { label: "#knitSA on IG", url: "https://www.instagram.com/explore/tags/knitsa/" },
     { label: "#mohairSA on IG", url: "https://www.instagram.com/explore/tags/mohairsa/" },
-    { label: "Knitting on Facebook", url: "https://www.facebook.com/search/top/?q=knitting%20south%20africa" },
+    { label: "Knitting on Facebook", url: "https://www.facebook.com/marketplace/search?query=knitting%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Stickers & Prints": [
     { label: "#stickersSA on IG", url: "https://www.instagram.com/explore/tags/stickerssa/" },
     { label: "#sastationery on IG", url: "https://www.instagram.com/explore/tags/sastationery/" },
-    { label: "Stickers on Facebook", url: "https://www.facebook.com/search/top/?q=stickers%20south%20africa" },
+    { label: "Stickers on Facebook", url: "https://www.facebook.com/marketplace/search?query=stickers%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Plants": [
     { label: "#plantsofsa on IG", url: "https://www.instagram.com/explore/tags/plantsofsa/" },
     { label: "#capetownplants on IG", url: "https://www.instagram.com/explore/tags/capetownplants/" },
     { label: "#proplifeza on IG", url: "https://www.instagram.com/explore/tags/proplifeza/" },
-    { label: "Plants on Facebook", url: "https://www.facebook.com/search/top/?q=indoor%20plants%20south%20africa" },
+    { label: "Plants on Facebook", url: "https://www.facebook.com/marketplace/search?query=indoor%20plants%20south%20africa" },
   ],
   "Candles": [
     { label: "#candlesSA on IG", url: "https://www.instagram.com/explore/tags/candlessa/" },
     { label: "#soywaxsa on IG", url: "https://www.instagram.com/explore/tags/soywaxsa/" },
-    { label: "Candles on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20candles%20south%20africa" },
+    { label: "Candles on Facebook", url: "https://www.facebook.com/marketplace/search?query=handmade%20candles%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Soap & Bath": [
     { label: "#handmadesoapsa on IG", url: "https://www.instagram.com/explore/tags/handmadesoapsa/" },
     { label: "#bathandbodysa on IG", url: "https://www.instagram.com/explore/tags/bathandbodysa/" },
-    { label: "Soap on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20soap%20south%20africa" },
+    { label: "Soap on Facebook", url: "https://www.facebook.com/marketplace/search?query=handmade%20soap%20south%20africa" },
     { label: "Faithful to Nature", url: "https://www.faithful-to-nature.co.za/search?keyword=handmade+soap" },
   ],
   "Beadwork & Jewelry": [
     { label: "#zulubeadwork on IG", url: "https://www.instagram.com/explore/tags/zulubeadwork/" },
     { label: "#beadworkSA on IG", url: "https://www.instagram.com/explore/tags/beadworksa/" },
-    { label: "Beadwork on Facebook", url: "https://www.facebook.com/search/top/?q=zulu%20beadwork%20south%20africa" },
+    { label: "Beadwork on Facebook", url: "https://www.facebook.com/marketplace/search?query=zulu%20beadwork%20south%20africa" },
     { label: "African Mamas Crafts", url: "https://africanmamascrafts.co.za/" },
   ],
   "Woven & Basketry": [
     { label: "#zulubaskets on IG", url: "https://www.instagram.com/explore/tags/zulubaskets/" },
     { label: "#telephonewireart on IG", url: "https://www.instagram.com/explore/tags/telephonewireart/" },
-    { label: "Baskets on Facebook", url: "https://www.facebook.com/search/top/?q=zulu%20baskets%20south%20africa" },
+    { label: "Baskets on Facebook", url: "https://www.facebook.com/marketplace/search?query=zulu%20baskets%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Ceramics": [
     { label: "#ceramicsSA on IG", url: "https://www.instagram.com/explore/tags/ceramicssa/" },
     { label: "#sapottery on IG", url: "https://www.instagram.com/explore/tags/sapottery/" },
-    { label: "Ceramics on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20ceramics%20south%20africa" },
+    { label: "Ceramics on Facebook", url: "https://www.facebook.com/marketplace/search?query=handmade%20ceramics%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Leather": [
     { label: "#leathersa on IG", url: "https://www.instagram.com/explore/tags/leathersa/" },
     { label: "#sahandmade on IG", url: "https://www.instagram.com/explore/tags/sahandmade/" },
-    { label: "Leather on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20leather%20south%20africa" },
+    { label: "Leather on Facebook", url: "https://www.facebook.com/marketplace/search?query=handmade%20leather%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Wood & Carving": [
     { label: "#woodworkSA on IG", url: "https://www.instagram.com/explore/tags/woodworksa/" },
     { label: "#sawoodworking on IG", url: "https://www.instagram.com/explore/tags/sawoodworking/" },
-    { label: "Woodwork on Facebook", url: "https://www.facebook.com/search/top/?q=woodwork%20south%20africa" },
+    { label: "Woodwork on Facebook", url: "https://www.facebook.com/marketplace/search?query=woodwork%20south%20africa" },
     { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Wirework": [
     { label: "#wireartSA on IG", url: "https://www.instagram.com/explore/tags/wireartsa/" },
     { label: "#beadedwireart on IG", url: "https://www.instagram.com/explore/tags/beadedwireart/" },
-    { label: "Wire art on Facebook", url: "https://www.facebook.com/search/top/?q=wire%20art%20south%20africa" },
+    { label: "Wire art on Facebook", url: "https://www.facebook.com/marketplace/search?query=wire%20art%20south%20africa" },
     { label: "African Crafts Market", url: "https://www.africancraftsmarket.com" },
   ],
   "Tea & Herbal": [
     { label: "#rooibossa on IG", url: "https://www.instagram.com/explore/tags/rooibossa/" },
     { label: "#honeybushtea on IG", url: "https://www.instagram.com/explore/tags/honeybushtea/" },
-    { label: "Tea on Facebook", url: "https://www.facebook.com/search/top/?q=rooibos%20tea%20south%20africa" },
+    { label: "Tea on Facebook", url: "https://www.facebook.com/marketplace/search?query=rooibos%20tea%20south%20africa" },
     { label: "Faithful to Nature — Tea", url: "https://www.faithful-to-nature.co.za/search?keyword=rooibos+tea" },
   ],
   "Coffee": [
     { label: "#sacoffee on IG", url: "https://www.instagram.com/explore/tags/sacoffee/" },
     { label: "#capetowncoffee on IG", url: "https://www.instagram.com/explore/tags/capetowncoffee/" },
     { label: "#specialitycoffeesa on IG", url: "https://www.instagram.com/explore/tags/specialitycoffeesa/" },
-    { label: "Coffee on Facebook", url: "https://www.facebook.com/search/top/?q=specialty%20coffee%20south%20africa" },
+    { label: "Coffee on Facebook", url: "https://www.facebook.com/marketplace/search?query=specialty%20coffee%20south%20africa" },
   ],
 };
 
@@ -347,6 +347,7 @@ export default function Dashboard() {
             trendList.forEach((t) => {
               trendsByCategory[t.category.toLowerCase()] = {
                 mentions: t.mentions,
+                demand: t.demand,
                 trend: t.trend,
               };
             });
@@ -370,6 +371,7 @@ export default function Dashboard() {
               if (trendMatch) {
                 product.mentions = trendMatch.mentions;
                 product.trend = trendMatch.trend;
+                product.demand = trendMatch.demand;
               }
               return product;
             });
