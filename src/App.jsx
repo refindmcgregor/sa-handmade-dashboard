@@ -305,9 +305,7 @@ export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState(fallbackProducts);
   const [sales, setSales] = useState([]);
-  const [dataStatus, setDataStatus] = useState("sample"); // "sample" | "live" | "error"
-  const [lastUpdated, setLastUpdated] = useState(null);
-
+const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample" | "live" | "error"  const [lastUpdated, setLastUpdated] = useState(null);
   // Fetch live data from your Google Sheet on load
   useEffect(() => {
     const loadData = async () => {
