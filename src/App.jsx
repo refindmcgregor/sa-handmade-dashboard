@@ -216,8 +216,7 @@ const productLinks = (p) => {
   return [
     { label: "Instagram", url: `https://www.instagram.com/explore/tags/${tag}sa/` },
     { label: "TikTok", url: `https://www.tiktok.com/search?q=${encodeURIComponent(p.name + " South Africa")}` },
-    { label: "Hello Pretty", url: `https://hellopretty.co.za/search?q=${search}` },
-    { label: "Pinterest SA", url: `https://za.pinterest.com/search/pins/?q=${search}` },
+    { label: "Facebook", url: `https://www.facebook.com/search/top/?q=${search}` },
   ];
 };
 
@@ -225,78 +224,93 @@ const productLinks = (p) => {
 const categoryLinks = {
   "Sewing": [
     { label: "#sewingSA on IG", url: "https://www.instagram.com/explore/tags/sewingsa/" },
-    { label: "Hello Pretty — Sewing", url: "https://hellopretty.co.za/search?q=handmade+sewn" },
     { label: "#shweshwe on IG", url: "https://www.instagram.com/explore/tags/shweshwe/" },
+    { label: "Sewing on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20sewing%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Crochet": [
     { label: "#crochetSA on IG", url: "https://www.instagram.com/explore/tags/crochetsa/" },
     { label: "#crochetsouthafrica on TikTok", url: "https://www.tiktok.com/tag/crochetsouthafrica" },
-    { label: "Hello Pretty — Crochet", url: "https://hellopretty.co.za/search?q=crochet" },
+    { label: "Crochet on Facebook", url: "https://www.facebook.com/search/top/?q=crochet%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Knit": [
     { label: "#knitSA on IG", url: "https://www.instagram.com/explore/tags/knitsa/" },
-    { label: "Hello Pretty — Knitwear", url: "https://hellopretty.co.za/search?q=knit" },
     { label: "#mohairSA on IG", url: "https://www.instagram.com/explore/tags/mohairsa/" },
+    { label: "Knitting on Facebook", url: "https://www.facebook.com/search/top/?q=knitting%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Stickers & Prints": [
     { label: "#stickersSA on IG", url: "https://www.instagram.com/explore/tags/stickerssa/" },
-    { label: "Hello Pretty — Prints", url: "https://hellopretty.co.za/search?q=art+print" },
     { label: "#sastationery on IG", url: "https://www.instagram.com/explore/tags/sastationery/" },
+    { label: "Stickers on Facebook", url: "https://www.facebook.com/search/top/?q=stickers%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Plants": [
     { label: "#plantsofsa on IG", url: "https://www.instagram.com/explore/tags/plantsofsa/" },
     { label: "#capetownplants on IG", url: "https://www.instagram.com/explore/tags/capetownplants/" },
     { label: "#proplifeza on IG", url: "https://www.instagram.com/explore/tags/proplifeza/" },
+    { label: "Plants on Facebook", url: "https://www.facebook.com/search/top/?q=indoor%20plants%20south%20africa" },
   ],
   "Candles": [
     { label: "#candlesSA on IG", url: "https://www.instagram.com/explore/tags/candlessa/" },
     { label: "#soywaxsa on IG", url: "https://www.instagram.com/explore/tags/soywaxsa/" },
-    { label: "Hello Pretty — Candles", url: "https://hellopretty.co.za/search?q=candle" },
+    { label: "Candles on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20candles%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Soap & Bath": [
     { label: "#handmadesoapsa on IG", url: "https://www.instagram.com/explore/tags/handmadesoapsa/" },
     { label: "#bathandbodysa on IG", url: "https://www.instagram.com/explore/tags/bathandbodysa/" },
+    { label: "Soap on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20soap%20south%20africa" },
     { label: "Faithful to Nature", url: "https://www.faithful-to-nature.co.za/search?keyword=handmade+soap" },
   ],
   "Beadwork & Jewelry": [
     { label: "#zulubeadwork on IG", url: "https://www.instagram.com/explore/tags/zulubeadwork/" },
     { label: "#beadworkSA on IG", url: "https://www.instagram.com/explore/tags/beadworksa/" },
+    { label: "Beadwork on Facebook", url: "https://www.facebook.com/search/top/?q=zulu%20beadwork%20south%20africa" },
     { label: "African Mamas Crafts", url: "https://africanmamascrafts.co.za/" },
   ],
   "Woven & Basketry": [
     { label: "#zulubaskets on IG", url: "https://www.instagram.com/explore/tags/zulubaskets/" },
     { label: "#telephonewireart on IG", url: "https://www.instagram.com/explore/tags/telephonewireart/" },
-    { label: "Hello Pretty — Baskets", url: "https://hellopretty.co.za/search?q=basket" },
+    { label: "Baskets on Facebook", url: "https://www.facebook.com/search/top/?q=zulu%20baskets%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Ceramics": [
     { label: "#ceramicsSA on IG", url: "https://www.instagram.com/explore/tags/ceramicssa/" },
     { label: "#sapottery on IG", url: "https://www.instagram.com/explore/tags/sapottery/" },
-    { label: "Hello Pretty — Ceramics", url: "https://hellopretty.co.za/search?q=ceramic" },
+    { label: "Ceramics on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20ceramics%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Leather": [
     { label: "#leathersa on IG", url: "https://www.instagram.com/explore/tags/leathersa/" },
     { label: "#sahandmade on IG", url: "https://www.instagram.com/explore/tags/sahandmade/" },
-    { label: "Hello Pretty — Leather", url: "https://hellopretty.co.za/search?q=leather" },
+    { label: "Leather on Facebook", url: "https://www.facebook.com/search/top/?q=handmade%20leather%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Wood & Carving": [
     { label: "#woodworkSA on IG", url: "https://www.instagram.com/explore/tags/woodworksa/" },
     { label: "#sawoodworking on IG", url: "https://www.instagram.com/explore/tags/sawoodworking/" },
-    { label: "Hello Pretty — Wood", url: "https://hellopretty.co.za/search?q=wood" },
+    { label: "Woodwork on Facebook", url: "https://www.facebook.com/search/top/?q=woodwork%20south%20africa" },
+    { label: "Aya Africa", url: "https://aya.africa" },
   ],
   "Wirework": [
     { label: "#wireartSA on IG", url: "https://www.instagram.com/explore/tags/wireartsa/" },
     { label: "#beadedwireart on IG", url: "https://www.instagram.com/explore/tags/beadedwireart/" },
+    { label: "Wire art on Facebook", url: "https://www.facebook.com/search/top/?q=wire%20art%20south%20africa" },
     { label: "African Crafts Market", url: "https://www.africancraftsmarket.com" },
   ],
   "Tea & Herbal": [
     { label: "#rooibossa on IG", url: "https://www.instagram.com/explore/tags/rooibossa/" },
     { label: "#honeybushtea on IG", url: "https://www.instagram.com/explore/tags/honeybushtea/" },
+    { label: "Tea on Facebook", url: "https://www.facebook.com/search/top/?q=rooibos%20tea%20south%20africa" },
     { label: "Faithful to Nature — Tea", url: "https://www.faithful-to-nature.co.za/search?keyword=rooibos+tea" },
   ],
   "Coffee": [
     { label: "#sacoffee on IG", url: "https://www.instagram.com/explore/tags/sacoffee/" },
     { label: "#capetowncoffee on IG", url: "https://www.instagram.com/explore/tags/capetowncoffee/" },
     { label: "#specialitycoffeesa on IG", url: "https://www.instagram.com/explore/tags/specialitycoffeesa/" },
+    { label: "Coffee on Facebook", url: "https://www.facebook.com/search/top/?q=specialty%20coffee%20south%20africa" },
   ],
 };
 
@@ -306,6 +320,7 @@ export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState(fallbackProducts);
   const [sales, setSales] = useState([]);
+  const [trends, setTrends] = useState([]);
   const [dataStatus, setDataStatus] = useState("sample"); // "sample" | "live" | "error"
   const [lastUpdated, setLastUpdated] = useState(null);
 
@@ -320,10 +335,19 @@ export default function Dashboard() {
           if (res.ok) {
             const text = await res.text();
             const rows = parseCSV(text).filter((r) => r.category);
-            rows.forEach((r) => {
-              trendsByCategory[r.category.toLowerCase()] = {
-                mentions: Number(r.mentions) || 0,
-                trend: Number(r.trend) || 0,
+            const trendList = rows.map((r) => ({
+              hashtag: r.hashtag || "",
+              category: r.category || "",
+              mentions: Number(r.mentions) || 0,
+              demand: Number(r.demand) || 0,
+              trend: Number(r.trend) || 0,
+              avgLikes: Number(r.avg_likes) || 0,
+            }));
+            setTrends(trendList);
+            trendList.forEach((t) => {
+              trendsByCategory[t.category.toLowerCase()] = {
+                mentions: t.mentions,
+                trend: t.trend,
               };
             });
           }
@@ -509,6 +533,54 @@ export default function Dashboard() {
                   );
                 })}
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* CATEGORY TRENDS — live from Apify */}
+        {trends.length > 0 && (
+          <section className="mb-12">
+            <div className="text-xs uppercase tracking-[0.3em] text-stone-700 mb-3 font-sans">§ 00.5 — Live SA Instagram trends</div>
+            <h2 className="text-3xl md:text-4xl font-light italic text-stone-900 mb-2">What's trending right now.</h2>
+            <p className="text-stone-700 mb-6 max-w-2xl">
+              Live data from your Apify scrapes. Categories ranked by demand score.
+            </p>
+            <div className="bg-stone-50 border border-stone-200 p-5" style={{ borderRadius: "6px", boxShadow: "0 2px 8px rgba(28, 25, 23, 0.08)" }}>
+              <div className="space-y-3">
+                {[...trends].sort((a, b) => b.demand - a.demand).map((t, i) => (
+                  <div key={i} className="flex items-center justify-between flex-wrap gap-3 py-2 border-b border-stone-200 last:border-b-0">
+                    <div className="flex items-center gap-3 flex-1 min-w-[200px]">
+                      <div className="text-xl font-mono font-bold text-stone-400 w-8">{String(i + 1).padStart(2, "0")}</div>
+                      <div>
+                        <div className="text-base font-medium text-stone-900">#{t.hashtag}</div>
+                        <div className="text-xs uppercase tracking-wider text-stone-500 font-sans">{t.category}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-6 text-sm font-sans">
+                      <div className="text-center">
+                        <div className="text-xs text-stone-500 uppercase tracking-wider">Posts</div>
+                        <div className="text-lg font-bold text-stone-900">{t.mentions}</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xs text-stone-500 uppercase tracking-wider">Demand</div>
+                        <div className="text-lg font-bold text-stone-900">{t.demand}</div>
+                      </div>
+                      <div className="text-center min-w-[60px]">
+                        <div className="text-xs text-stone-500 uppercase tracking-wider">Growth</div>
+                        <div className={`text-lg font-bold flex items-center gap-1 justify-center ${
+                          t.trend > 0 ? "text-emerald-700" : t.trend < 0 ? "text-red-700" : "text-stone-500"
+                        }`}>
+                          <TrendArrow value={t.trend} />
+                          {t.trend > 0 ? "+" : ""}{t.trend}%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-stone-600 mt-4 italic">
+                Trends are based on hashtag activity from your most recent Apify scrape. Higher demand + positive growth signals which categories to lean into.
+              </p>
             </div>
           </section>
         )}
@@ -787,7 +859,7 @@ export default function Dashboard() {
                   </div>
 
                   <div className="mt-3 pt-3 border-t border-stone-200 flex flex-wrap items-center gap-2 text-xs font-sans">
-                    <span className="text-stone-600 uppercase tracking-wider mr-2">See SA examples →</span>
+                    <span className="text-stone-600 uppercase tracking-wider mr-2">Search social →</span>
                     {productLinks(p).map((link) => (
                       <a
                         key={link.label}
