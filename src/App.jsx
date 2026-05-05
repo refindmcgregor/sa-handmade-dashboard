@@ -23,7 +23,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
- 
+
 // ============ FALLBACK PRODUCT DATA ============
 // This sample data shows when no live sheet is connected.
 // Once you publish your Google Sheet (see SETUP_GUIDE.md), the dashboard
@@ -216,7 +216,7 @@ const productLinks = (p) => {
   return [
     { label: "Instagram", url: `https://www.instagram.com/explore/tags/${tag}sa/` },
     { label: "TikTok", url: `https://www.tiktok.com/search?q=${encodeURIComponent(p.name + " South Africa")}` },
-    { label: "Aya Africa", url: `https://aya.africa` },
+    { label: "Hello Pretty", url: `https://hellopretty.co.za/search?q=${search}` },
     { label: "Pinterest SA", url: `https://za.pinterest.com/search/pins/?q=${search}` },
   ];
 };
@@ -225,22 +225,22 @@ const productLinks = (p) => {
 const categoryLinks = {
   "Sewing": [
     { label: "#sewingSA on IG", url: "https://www.instagram.com/explore/tags/sewingsa/" },
-    { label: "Aya Africa — Sewing", url: "https://aya.africa" },
+    { label: "Hello Pretty — Sewing", url: "https://hellopretty.co.za/search?q=handmade+sewn" },
     { label: "#shweshwe on IG", url: "https://www.instagram.com/explore/tags/shweshwe/" },
   ],
   "Crochet": [
     { label: "#crochetSA on IG", url: "https://www.instagram.com/explore/tags/crochetsa/" },
     { label: "#crochetsouthafrica on TikTok", url: "https://www.tiktok.com/tag/crochetsouthafrica" },
-    { label: "Aya Africa — Crochet", url: "https://aya.africa" },
+    { label: "Hello Pretty — Crochet", url: "https://hellopretty.co.za/search?q=crochet" },
   ],
   "Knit": [
     { label: "#knitSA on IG", url: "https://www.instagram.com/explore/tags/knitsa/" },
-    { label: "Aya Africa — Knitwear", url: "https://aya.africa" },
+    { label: "Hello Pretty — Knitwear", url: "https://hellopretty.co.za/search?q=knit" },
     { label: "#mohairSA on IG", url: "https://www.instagram.com/explore/tags/mohairsa/" },
   ],
   "Stickers & Prints": [
     { label: "#stickersSA on IG", url: "https://www.instagram.com/explore/tags/stickerssa/" },
-    { label: "Aya Africa — Prints", url: "https://aya.africa" },
+    { label: "Hello Pretty — Prints", url: "https://hellopretty.co.za/search?q=art+print" },
     { label: "#sastationery on IG", url: "https://www.instagram.com/explore/tags/sastationery/" },
   ],
   "Plants": [
@@ -251,7 +251,7 @@ const categoryLinks = {
   "Candles": [
     { label: "#candlesSA on IG", url: "https://www.instagram.com/explore/tags/candlessa/" },
     { label: "#soywaxsa on IG", url: "https://www.instagram.com/explore/tags/soywaxsa/" },
-    { label: "Aya Africa — Candles", url: "https://aya.africa" },
+    { label: "Hello Pretty — Candles", url: "https://hellopretty.co.za/search?q=candle" },
   ],
   "Soap & Bath": [
     { label: "#handmadesoapsa on IG", url: "https://www.instagram.com/explore/tags/handmadesoapsa/" },
@@ -266,22 +266,22 @@ const categoryLinks = {
   "Woven & Basketry": [
     { label: "#zulubaskets on IG", url: "https://www.instagram.com/explore/tags/zulubaskets/" },
     { label: "#telephonewireart on IG", url: "https://www.instagram.com/explore/tags/telephonewireart/" },
-    { label: "Aya Africa — Baskets", url: "https://aya.africa" },
+    { label: "Hello Pretty — Baskets", url: "https://hellopretty.co.za/search?q=basket" },
   ],
   "Ceramics": [
     { label: "#ceramicsSA on IG", url: "https://www.instagram.com/explore/tags/ceramicssa/" },
     { label: "#sapottery on IG", url: "https://www.instagram.com/explore/tags/sapottery/" },
-    { label: "Aya Africa — Ceramics", url: "https://aya.africa" },
+    { label: "Hello Pretty — Ceramics", url: "https://hellopretty.co.za/search?q=ceramic" },
   ],
   "Leather": [
     { label: "#leathersa on IG", url: "https://www.instagram.com/explore/tags/leathersa/" },
     { label: "#sahandmade on IG", url: "https://www.instagram.com/explore/tags/sahandmade/" },
-    { label: "Aya Africa — Leather", url: "https://aya.africa" },
+    { label: "Hello Pretty — Leather", url: "https://hellopretty.co.za/search?q=leather" },
   ],
   "Wood & Carving": [
     { label: "#woodworkSA on IG", url: "https://www.instagram.com/explore/tags/woodworksa/" },
     { label: "#sawoodworking on IG", url: "https://www.instagram.com/explore/tags/sawoodworking/" },
-    { label: "Aya Africa — Wood", url: "https://aya.africa" },
+    { label: "Hello Pretty — Wood", url: "https://hellopretty.co.za/search?q=wood" },
   ],
   "Wirework": [
     { label: "#wireartSA on IG", url: "https://www.instagram.com/explore/tags/wireartsa/" },
@@ -306,12 +306,13 @@ export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState(fallbackProducts);
   const [sales, setSales] = useState([]);
-const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample" | "live" | "error"  
+  const [dataStatus, setDataStatus] = useState("sample"); // "sample" | "live" | "error"
   const [lastUpdated, setLastUpdated] = useState(null);
+
   // Fetch live data from your Google Sheet on load
   useEffect(() => {
     const loadData = async () => {
-      // Fetch trends first so we can join it into products
+      // Trends tab — fetched first so we can join into products
       let trendsByCategory = {};
       if (SHEET_URLS.trends) {
         try {
@@ -358,27 +359,6 @@ const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample"
         }
       }
 
-      // Sales tab
-      if (SHEET_URLS.sales) {
-        try {
-          const res = await fetch(SHEET_URLS.sales);
-          if (!res.ok) throw new Error("Fetch failed");
-          const text = await res.text();
-          const rows = parseCSV(text).filter((r) => r.product);
-          setSales(rows.map((r) => ({
-            date: r.date,
-            product: r.product,
-            category: r.category,
-            quantity: Number(r.quantity) || 0,
-            revenue: Number(r.revenue) || 0,
-            channel: r.channel || "",
-          })));
-        } catch (e) {
-          console.warn("Could not load sales data:", e);
-        }
-      }
-    };
-      }
       // Sales tab
       if (SHEET_URLS.sales) {
         try {
