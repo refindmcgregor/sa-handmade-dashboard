@@ -122,6 +122,7 @@ const fallbackProducts = [
 const SHEET_URLS = {
   products: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4QeT-Cn7-0PpIIifYDyRUqGRsj4sQNEAXpB8sb7502KzMXya1zbUl7H4fYn84z7kwcP3K85BuacQJ/pub?gid=0&single=true&output=csv",
   sales: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4QeT-Cn7-0PpIIifYDyRUqGRsj4sQNEAXpB8sb7502KzMXya1zbUl7H4fYn84z7kwcP3K85BuacQJ/pub?gid=812119574&single=true&output=csv",
+  trends: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4QeT-Cn7-0PpIIifYDyRUqGRsj4sQNEAXpB8sb7502KzMXya1zbUl7H4fYn84z7kwcP3K85BuacQJ/pub?gid=1259263870&single=true&output=csv",
 };
 
 // Tiny CSV parser — handles quoted values with commas inside
@@ -310,7 +311,27 @@ const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample"
   // Fetch live data from your Google Sheet on load
   useEffect(() => {
     const loadData = async () => {
-      // Products tab
+      // Fetch trends first so we can join it into products
+      let trendsByCategory = {};
+      if (SHEET_URLS.trends) {
+        try {
+          const res = await fetch(SHEET_URLS.trends);
+          if (res.ok) {
+            const text = await res.text();
+            const rows = parseCSV(text).filter((r) => r.category);
+            rows.forEach((r) => {
+              trendsByCategory[r.category.toLowerCase()] = {
+                mentions: Number(r.mentions) || 0,
+                trend: Number(r.trend) || 0,
+              };
+            });
+          }
+        } catch (e) {
+          console.warn("Could not load trends data:", e);
+        }
+      }
+
+      // Products tab — joined with trends data by category
       if (SHEET_URLS.products) {
         try {
           const res = await fetch(SHEET_URLS.products);
@@ -318,7 +339,16 @@ const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample"
           const text = await res.text();
           const rows = parseCSV(text).filter((r) => r.name);
           if (rows.length > 0) {
-            setProducts(rows.map(rowToProduct));
+            const productList = rows.map((r) => {
+              const product = rowToProduct(r);
+              const trendMatch = trendsByCategory[product.category.toLowerCase()];
+              if (trendMatch) {
+                product.mentions = trendMatch.mentions;
+                product.trend = trendMatch.trend;
+              }
+              return product;
+            });
+            setProducts(productList);
             setDataStatus("live");
             setLastUpdated(new Date());
           }
@@ -326,6 +356,28 @@ const [dataStatus, setDataStatus] = useState("loading"); // "loading" | "sample"
           console.warn("Could not load live products, using sample data:", e);
           setDataStatus("error");
         }
+      }
+
+      // Sales tab
+      if (SHEET_URLS.sales) {
+        try {
+          const res = await fetch(SHEET_URLS.sales);
+          if (!res.ok) throw new Error("Fetch failed");
+          const text = await res.text();
+          const rows = parseCSV(text).filter((r) => r.product);
+          setSales(rows.map((r) => ({
+            date: r.date,
+            product: r.product,
+            category: r.category,
+            quantity: Number(r.quantity) || 0,
+            revenue: Number(r.revenue) || 0,
+            channel: r.channel || "",
+          })));
+        } catch (e) {
+          console.warn("Could not load sales data:", e);
+        }
+      }
+    };
       }
       // Sales tab
       if (SHEET_URLS.sales) {
