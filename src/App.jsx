@@ -215,7 +215,7 @@ const productLinks = (p) => {
   return [
     { label: "Instagram", url: `https://www.instagram.com/explore/tags/${tag}sa/` },
     { label: "TikTok", url: `https://www.tiktok.com/search?q=${encodeURIComponent(p.name + " South Africa")}` },
-    { label: "Aya Africa", url: `https://aya.africa/search?q=${search}` },
+    { label: "Aya Africa", url: `https://aya.africa` },
     { label: "Pinterest SA", url: `https://za.pinterest.com/search/pins/?q=${search}` },
   ];
 };
@@ -224,22 +224,22 @@ const productLinks = (p) => {
 const categoryLinks = {
   "Sewing": [
     { label: "#sewingSA on IG", url: "https://www.instagram.com/explore/tags/sewingsa/" },
-    { label: "Aya Africa — Sewing", url: "https://aya.africa/search?q=handmade+sewn" },
+    { label: "Aya Africa — Sewing", url: "https://aya.africa" },
     { label: "#shweshwe on IG", url: "https://www.instagram.com/explore/tags/shweshwe/" },
   ],
   "Crochet": [
     { label: "#crochetSA on IG", url: "https://www.instagram.com/explore/tags/crochetsa/" },
     { label: "#crochetsouthafrica on TikTok", url: "https://www.tiktok.com/tag/crochetsouthafrica" },
-    { label: "Aya Africa — Crochet", url: "https://aya.africa/search?q=crochet" },
+    { label: "Aya Africa — Crochet", url: "https://aya.africa" },
   ],
   "Knit": [
     { label: "#knitSA on IG", url: "https://www.instagram.com/explore/tags/knitsa/" },
-    { label: "Aya Africa — Knitwear", url: "https://aya.africa/search?q=knit" },
+    { label: "Aya Africa — Knitwear", url: "https://aya.africa" },
     { label: "#mohairSA on IG", url: "https://www.instagram.com/explore/tags/mohairsa/" },
   ],
   "Stickers & Prints": [
     { label: "#stickersSA on IG", url: "https://www.instagram.com/explore/tags/stickerssa/" },
-    { label: "Aya Africa — Prints", url: "https://aya.africa/search?q=art+print" },
+    { label: "Aya Africa — Prints", url: "https://aya.africa" },
     { label: "#sastationery on IG", url: "https://www.instagram.com/explore/tags/sastationery/" },
   ],
   "Plants": [
@@ -250,7 +250,7 @@ const categoryLinks = {
   "Candles": [
     { label: "#candlesSA on IG", url: "https://www.instagram.com/explore/tags/candlessa/" },
     { label: "#soywaxsa on IG", url: "https://www.instagram.com/explore/tags/soywaxsa/" },
-    { label: "Aya Africa — Candles", url: "https://aya.africa/search?q=candle" },
+    { label: "Aya Africa — Candles", url: "https://aya.africa" },
   ],
   "Soap & Bath": [
     { label: "#handmadesoapsa on IG", url: "https://www.instagram.com/explore/tags/handmadesoapsa/" },
@@ -265,22 +265,22 @@ const categoryLinks = {
   "Woven & Basketry": [
     { label: "#zulubaskets on IG", url: "https://www.instagram.com/explore/tags/zulubaskets/" },
     { label: "#telephonewireart on IG", url: "https://www.instagram.com/explore/tags/telephonewireart/" },
-    { label: "Aya Africa — Baskets", url: "https://aya.africa/search?q=basket" },
+    { label: "Aya Africa — Baskets", url: "https://aya.africa" },
   ],
   "Ceramics": [
     { label: "#ceramicsSA on IG", url: "https://www.instagram.com/explore/tags/ceramicssa/" },
     { label: "#sapottery on IG", url: "https://www.instagram.com/explore/tags/sapottery/" },
-    { label: "Aya Africa — Ceramics", url: "https://aya.africa/search?q=ceramic" },
+    { label: "Aya Africa — Ceramics", url: "https://aya.africa" },
   ],
   "Leather": [
     { label: "#leathersa on IG", url: "https://www.instagram.com/explore/tags/leathersa/" },
     { label: "#sahandmade on IG", url: "https://www.instagram.com/explore/tags/sahandmade/" },
-    { label: "Aya Africa — Leather", url: "https://aya.africa/search?q=leather" },
+    { label: "Aya Africa — Leather", url: "https://aya.africa" },
   ],
   "Wood & Carving": [
     { label: "#woodworkSA on IG", url: "https://www.instagram.com/explore/tags/woodworksa/" },
     { label: "#sawoodworking on IG", url: "https://www.instagram.com/explore/tags/sawoodworking/" },
-    { label: "Aya Africa — Wood", url: "https://aya.africa/search?q=wood" },
+    { label: "Aya Africa — Wood", url: "https://aya.africa" },
   ],
   "Wirework": [
     { label: "#wireartSA on IG", url: "https://www.instagram.com/explore/tags/wireartsa/" },
