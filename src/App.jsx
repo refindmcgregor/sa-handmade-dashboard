@@ -215,7 +215,7 @@ const productLinks = (p) => {
   return [
     { label: "Instagram", url: `https://www.instagram.com/explore/tags/${tag}sa/` },
     { label: "TikTok", url: `https://www.tiktok.com/search?q=${encodeURIComponent(p.name + " South Africa")}` },
-    { label: "Hello Pretty", url: `https://aya.africa/search?q=${search}` },
+    { label: "Aya Africa", url: `https://aya.africa/search?q=${search}` },
     { label: "Pinterest SA", url: `https://za.pinterest.com/search/pins/?q=${search}` },
   ];
 };
