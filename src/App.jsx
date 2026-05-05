@@ -120,8 +120,9 @@ const fallbackProducts = [
 // To get these: File → Share → Publish to web → choose the tab → CSV format
 // Leave them as empty strings ("") to use the fallback data above.
 const SHEET_URLS = {
-  products: "", // e.g. "https://docs.google.com/spreadsheets/d/e/.../pub?gid=0&single=true&output=csv"
-  sales: "",    // e.g. "https://docs.google.com/spreadsheets/d/e/.../pub?gid=123&single=true&output=csv"
+  products: "", // e.g. "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4QeT-Cn7-0PpIIifYDyRUqGRsj4sQNEAXpB8sb7502KzMXya1zbUl7H4fYn84z7kwcP3K85BuacQJ/pub?gid=0&single=true&output=csv"
+  sales: "",    // e.g. "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4QeT-Cn7-0PpIIifYDyRUqGRsj4sQNEAXpB8sb7502KzMXya1zbUl7H4fYn84z7kwcP3K85BuacQJ/pub?gid=812119574&single=true&output=csv
+"
 };
 
 // Tiny CSV parser — handles quoted values with commas inside
