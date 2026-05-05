@@ -23,7 +23,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
-
+ 
 // ============ FALLBACK PRODUCT DATA ============
 // This sample data shows when no live sheet is connected.
 // Once you publish your Google Sheet (see SETUP_GUIDE.md), the dashboard
